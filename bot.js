@@ -236,7 +236,7 @@ client.on('message', (message) => {
 							message.channel.send("> Failed to exile.")
 						});
 					}
-				}).catch(function(err){
+	 			}).catch(function(err){
 					message.channel.send("> Couldn't get him in the group.")
 				});
 			}).catch(function(err){ 
