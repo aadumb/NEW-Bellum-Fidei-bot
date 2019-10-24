@@ -1,3 +1,17 @@
+const http = require('http');  
+http.createServer((req,res) => {
+    if (req.url == '/') {
+        console.log('ping');
+        res.write('ping');
+        res.end();
+    }
+}).listen(process.env.PORT || 4000);
+
+setInterval(function() {
+    http.get("https://bellumfideihostingbot.herokuapp.com");
+}, 300000); 
+
+
 const roblox = require('noblox.js')
 const Discord = require('discord.js')
 const client = new Discord.Client();
